@@ -47,17 +47,48 @@ export default function Home() {
 
         {/* ABOUT */}
         <section id="about" className="scroll-mt-20 bg-white py-24 sm:py-32">
-          <div className="mx-auto max-w-3xl px-5 text-center">
+          <div className="mx-auto grid max-w-content items-center gap-12 px-5 lg:grid-cols-2 lg:gap-20">
+            {/* Image */}
             <Reveal>
-              <h2 className="text-[13px] font-semibold uppercase tracking-[0.2em] text-subtle">
-                {about.title}
-              </h2>
+              <div className="relative overflow-hidden rounded-[28px] bg-mist shadow-[0_30px_70px_-30px_rgba(0,0,0,0.3)]">
+                <img
+                  src="/about.jpg"
+                  alt={about.imageAlt}
+                  className="aspect-[4/5] h-full w-full object-cover"
+                />
+              </div>
             </Reveal>
-            <Reveal delay={80}>
-              <p className="mt-6 text-[26px] font-medium leading-[1.35] tracking-tight text-ink sm:text-[32px]">
-                {about.body}
-              </p>
-            </Reveal>
+
+            {/* Text */}
+            <div className="order-first lg:order-none">
+              <Reveal>
+                <p className="text-[13px] font-semibold uppercase tracking-[0.2em] text-subtle">
+                  {about.eyebrow}
+                </p>
+              </Reveal>
+              <Reveal delay={80}>
+                <h2 className="mt-4 text-[32px] font-semibold leading-[1.1] tracking-tight text-ink sm:text-[40px]">
+                  {about.headline}
+                </h2>
+              </Reveal>
+              <Reveal delay={140}>
+                <p className="mt-5 text-[18px] leading-relaxed text-subtle">
+                  {about.body}
+                </p>
+              </Reveal>
+              <Reveal delay={200}>
+                <ul className="mt-8 space-y-3">
+                  {about.highlights.map((h) => (
+                    <li key={h} className="flex items-center gap-3">
+                      <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-ink text-[12px] text-white">
+                        ✓
+                      </span>
+                      <span className="text-[16px] text-ink">{h}</span>
+                    </li>
+                  ))}
+                </ul>
+              </Reveal>
+            </div>
           </div>
         </section>
 

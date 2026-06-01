@@ -22,8 +22,15 @@ export const hero = {
 };
 
 export const about = {
-  title: "About ENG Group",
-  body: "ENG Group LLC is a consulting firm built around one idea: complex projects succeed when planning, coordination, and execution stay aligned. We partner with organizations to plan, manage, and deliver development initiatives from the first concept to the final handover. Our team brings structure to ambiguity, turning broad objectives into clear roadmaps and dependable results. Whether you need strategic direction, technical coordination, or operational support, we work alongside your people to keep momentum high and outcomes predictable.",
+  eyebrow: "About ENG Group",
+  headline: "Structure and execution for complex projects.",
+  body: "We partner with organizations to plan, coordinate, and deliver development initiatives — from first concept to final handover. We bring clarity to ambiguity and keep every project moving forward.",
+  highlights: [
+    "Hands-on delivery, not just advice",
+    "Clear plans from complex goals",
+    "One accountable team, end to end",
+  ],
+  imageAlt: "ENG Group consultant",
 };
 
 export const services = {
